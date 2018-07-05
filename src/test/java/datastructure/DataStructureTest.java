@@ -27,5 +27,25 @@ public class DataStructureTest {
 		assertTrue(queue.isEmpty());
 		
 	}
+	
+	@Test
+	public void testStack(){
+		Stack<Integer> stack = new StackImpl<Integer>();
+		
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
+		stack.push(4);
+		stack.push(5);
+		
+		assertEquals(stack.pop(), new Integer(5));
+		assertEquals(stack.pop(), new Integer(4));
+		assertEquals(stack.pop(), new Integer(3));
+		assertEquals(stack.peek(), new Integer(2));
+		assertTrue(!stack.isEmpty());
+		assertEquals(stack.pop(), new Integer(2));
+		assertEquals(stack.pop(), new Integer(1));
+		assertTrue(stack.isEmpty());
+	}
 
 }
