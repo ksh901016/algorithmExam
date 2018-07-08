@@ -1,8 +1,10 @@
 package datastructure;
 
+import java.util.ArrayList;
 import java.util.EmptyStackException;
+import java.util.List;
 
-public class StackImpl<T> implements Stack<T>{
+public class StackImpl<T>implements Stack<T>{
 	private Node<T> top;
 	
 	class Node<T>{
@@ -46,5 +48,26 @@ public class StackImpl<T> implements Stack<T>{
 	public boolean isEmpty() {
 		return top == null;
 	}
+	
+	@Override
+	public void clear() {
+	    top = null;
+	}
+
+    @Override
+    public void print() {
+        if(top == null) return;
+        List<T> list = new ArrayList<T>();
+        Node<T> temp = top;
+        while(temp != null) {
+            list.add(temp.data);
+            temp = temp .next;
+        }
+        for(int i=list.size()-1; i >=0; i--) {
+            System.out.print(list.get(i)+" - ");
+        }
+        System.out.println();
+        
+    }
 
 }
