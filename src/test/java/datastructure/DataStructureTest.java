@@ -47,5 +47,11 @@ public class DataStructureTest {
 		assertEquals(stack.pop(), (Integer) 1);
 		assertTrue(stack.isEmpty());
 	}
+	
+	public void testTree(){
+		Tree tree = new Tree();
+		tree.setRoot(tree.makeNode(null, 5, null));
+		
+	}
 
 }

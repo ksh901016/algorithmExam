@@ -23,6 +23,7 @@ public class Tree {
         return node;
     }
     
+    // 중위순회
     public void inorder(Node node) {
         if(node != null) {
             inorder(node.left);
@@ -31,6 +32,7 @@ public class Tree {
         }
     }
     
+    // 전위순회
     public void preorder(Node node) {
         if(node != null) {
             System.out.println(node.data);
@@ -39,11 +41,16 @@ public class Tree {
         }
     }
     
+    // 후위순회
     public void postorder(Node node) {
         if(node != null) {
             postorder(node.left);
             postorder(node.right);
             System.out.println(node.data);
         }
+    }
+    
+    public void insertNode(int value){
+    	
     }
 }
