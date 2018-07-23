@@ -19,7 +19,7 @@ public class MazeMain {
         Position cur = new Position(0, 0);
         
         while(true) {
-            maze[cur.y][cur.x] = mazeUtil.VISITED; // 현재위치를 방문했다고 표시 
+            maze[cur.x][cur.y] = mazeUtil.VISITED; // 현재위치를 방문했다고 표시 
             if(cur.x == n-1 && cur.y == n-1) {
                 System.out.println("Found the path.");
                 break;

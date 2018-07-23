@@ -3,7 +3,6 @@ package algorithm.maze;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Stack;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,25 +69,25 @@ public class Maze {
     public boolean movable(Position cur, int dir) {
         // 0 ~ n-1사이에 있어야함 , 1이어야함 (PATH 이어야함)
         if(dir == 0) {
-            if(cur.y-1 <= maze.length -1 && cur.y-1 >= 0 && maze[cur.y-1][cur.x] == PATH) {
+            if(cur.x-1 <= maze.length -1 && cur.x-1 >= 0 && maze[cur.x-1][cur.y] == PATH) {
                 return true;
             }else {
                 return false;
             }
         }else if(dir == 1) {
-            if(cur.x+1 <= maze.length -1 && cur.x+1 >= 0 && maze[cur.y][cur.x+1] == PATH) {
+            if(cur.y+1 <= maze.length -1 && cur.y+1 >= 0 && maze[cur.x][cur.y+1] == PATH) {
                 return true;
             }else {
                 return false;
             }
         }else if(dir == 2) {
-            if(cur.y+1 <= maze.length -1 && cur.y+1 >=0 && maze[cur.y+1][cur.x] == PATH) {
+            if(cur.x+1 <= maze.length -1 && cur.x+1 >=0 && maze[cur.x+1][cur.y] == PATH) {
                 return true;
             }else {
                 return false;
             }
         }else {
-            if(cur.x-1 <= maze.length -1 && cur.x-1 >= 0 && maze[cur.y][cur.x-1] == PATH) {
+            if(cur.y-1 <= maze.length -1 && cur.y-1 >= 0 && maze[cur.x][cur.y-1] == PATH) {
                 return true;
             }else {
                 return false;
