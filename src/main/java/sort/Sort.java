@@ -1,7 +1,5 @@
 package sort;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-
 import java.util.LinkedList;
 import java.util.List;
 
