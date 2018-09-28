@@ -1,4 +1,4 @@
-package utilize.stack;
+package utili.stack;
 
 import datastructure.Stack;
 import datastructure.StackImpl;
