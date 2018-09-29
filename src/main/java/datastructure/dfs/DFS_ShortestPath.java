@@ -29,8 +29,6 @@ public class DFS_ShortestPath {
 				map[i][j] = Integer.parseInt(nums[j]);
 			}
 		}
-		printMatrix();
-		
 		dfs(0, 0, 1);
 		System.out.printf("최단 거리 : %d\n", min);
 	}
